@@ -1,0 +1,21 @@
+{
+  "name": "nw",
+  "app_name": "nw",
+  "version": "0.0.1",
+  "main": "index.html",
+  "window": {
+    "title": "TANGRAM PUZZLE",
+    "toolbar": false,
+    "fullscreen": false,
+    "width": 1600,
+    "height": 1200,
+    "position": "center",
+    "min_width": 1280,
+    "min_height": 640
+  },
+  "chromium-args": "--in-process-gpu --disable-transparency",
+  "devDependencies": {},
+  "dependencies": {
+    "interactjs": "^1.3.3"
+  }
+}
