@@ -22,6 +22,17 @@ function closeWindow(){
     window.close()
 }
 
+document.getElementById('Reset').addEventListener('click',resetImages);
+
+function resetImages(){
+    var images = document.getElementsByClassName("dragandrotate");
+    console.log(images);
+    for (var i = 0; i < images.length; i++) {
+        images[i].style.webkitTransform =
+        images[i].style.transform =
+            "";
+    }
+}
 
 
 // target elements with the "draggable" class
