@@ -67,11 +67,7 @@ interact('.dragandrotate')
   .on('doubletap', function (event) {
     changeImage();
   });
-//https://www.khanacademy.org/math/linear-algebra/matrix-transformations/lin-trans-examples/v/linear-transformation-examples-rotations-in-r2
-//Rot (theta) (X->) = [cos (theta) -sin(theta)]
-                    //[sign (theta) cos(theta)]
-                    //for 45 they eval to sqrt(2)/2, -sqrt(2)/2, 
-                    //                    sqrt(2)/2   sqrt(2)/2 
+
 
   function changeImage() {
     var target = event.target;
@@ -125,11 +121,6 @@ interact('.dragandrotate')
   // this is used later in the resizing and gesture demos
   window.dragMoveListener = dragMoveListener;
 
-function getRadians(degrees){
-    //should have worked, too much overflow
-    var theta = +((degrees * (Math.PI / 180)).toPrecision(6));
-}
-
 function getRotationMatrix(degrees){
     var rotMat = []
     switch(degrees) {
@@ -160,7 +151,11 @@ function getRotationMatrix(degrees){
     }
     return rotMat;
 } 
-
+//https://www.khanacademy.org/math/linear-algebra/matrix-transformations/lin-trans-examples/v/linear-transformation-examples-rotations-in-r2
+//Rot (theta) (X->) = [cos (theta) -sin(theta)]
+                    //[sign (theta) cos(theta)]
+                    //for 45 they eval to sqrt(2)/2, -sqrt(2)/2, 
+                    //                    sqrt(2)/2   sqrt(2)/2 
 /*
   function oldChangeImage() {
     var target = event.target;
@@ -176,4 +171,14 @@ function getRotationMatrix(degrees){
     str = str.replace(/(\d)/g, rotate) 
     target.src = str;
   }
+
+  function getRadians(degrees){
+    //should have worked, too much overflow
+    var theta = +((degrees * (Math.PI / 180)).toPrecision(6));
+  }
+
+
+
+http://interactjs.io/docs/restriction/
+https://swizec.com/blog/web-page-segmentation/swizec/4364  
 */
